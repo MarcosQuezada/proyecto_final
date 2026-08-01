@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcos Onais Quezada Sánchez</title>
+    <meta name="description" content="Portafolio profesional y moderno de Marcos Onais Quezada Sánchez" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="particle-canvas"></canvas>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#inicio">Marcos Onais</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#unidad1">Unidad 1</a></li>
+            <li class="nav-item"><a class="nav-link" href="#unidad2">Unidad 2</a></li>
+            <li class="nav-item"><a class="nav-link" href="#unidad3">Unidad 3</a></li>
+            <li class="nav-item"><a class="nav-link" href="#biografia">Biografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ciudad">Ciudad</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section id="inicio" class="hero">
+        <div class="container">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-7" data-aos="fade-right">
+              <div class="hero-card">
+                <p class="text-uppercase fw-semibold mb-3" style="letter-spacing:0.25em; color:#7af3ff;">Portafolio personal</p>
+                <h1 class="hero-title">Hola, soy <span>Marcos Onais Quezada Sánchez</span></h1>
+                <p class="hero-subtitle">Estudiante | Futuro Ingeniero en Software | Apasionado por la Tecnología</p>
+                <a class="btn-neon" href="#biografia"><i class="fa-solid fa-arrow-right"></i> Conóceme</a>
+              </div>
+            </div>
+            <div class="col-lg-5 text-center" data-aos="fade-left">
+              <div class="photo-frame">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23111827'/%3E%3Ccircle cx='200' cy='170' r='90' fill='%235b7cff' fill-opacity='0.75'/%3E%3Ccircle cx='200' cy='230' r='130' fill='%2300d4ff' fill-opacity='0.25'/%3E%3Ctext x='200' y='360' text-anchor='middle' font-family='Poppins, Arial' font-size='28' fill='white'%3EFoto futura%3C/text%3E%3C/svg%3E" alt="Foto personal placeholder" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="biografia" class="py-5">
+        <div class="container">
+          <div class="text-center" data-aos="fade-up">
+            <h2 class="section-title">Mi <span>Biografía</span></h2>
+            <p class="section-text mx-auto">Aquí podrás escribir tu historia personal, tus metas y tus experiencias de forma elegante y profesional.</p>
+          </div>
+          <div class="row g-4 mt-2">
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="glass-card h-100 biography-card">
+                <div class="biography-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h4>Educación</h4>
+                <p class="text-muted">Estudié en la Unidad Educativa Fiscal Daniel López; luego continué en la Unidad Educativa Fiscal Alejo Lascano y actualmente estudio en la Universidad Técnica de Cotopaxi.</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="glass-card h-100 biography-card">
+                <div class="biography-icon"><i class="fa-solid fa-heart"></i></div>
+                <h4>Cosas que me gustan</h4>
+                <p class="text-muted">Me gustan la tecnología, aprender cosas nuevas, escuchar música y disfrutar de momentos que me ayudan a crecer y mejorar cada día.</p>
+              </div>
+            </div>
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="glass-card h-100 biography-card">
+                <div class="biography-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <h4>Aprendizaje</h4>
+                <p class="text-muted">Me gusta aprender mucho sobre las tecnologías y explorar la diversidad de lenguajes de programación.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ciudad" class="py-5">
+        <div class="container">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="glass-card city-card">
+                <h2 class="section-title">Ciudad donde <span>vivo</span></h2>
+                <p class="section-text">Agrega aquí el nombre de tu ciudad, provincia, país y una fotografía o mapa ilustrativo.</p>
+                <ul class="list-unstyled mb-0">
+                  <li><strong>Ciudad:</strong> Latacunga</li>
+                  <li><strong>Provincia:</strong> Cotopaxi</li>
+                  <li><strong>País:</strong> Ecuador</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="glass-card city-card">
+                <div class="map-box">
+                  <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="20" width="360" height="210" rx="24" fill="rgba(255,255,255,0.10)" />
+                    <path d="M120 80 L180 60 L240 90 L300 70 L320 130 L280 160 L220 150 L170 180 L110 160 Z" fill="rgba(0,212,255,0.25)" stroke="rgba(255,255,255,0.5)" />
+                    <circle cx="210" cy="110" r="8" fill="#00d4ff" />
+                    <circle cx="155" cy="125" r="5" fill="#7af3ff" />
+                    <circle cx="275" cy="145" r="6" fill="#5b7cff" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="unidad1" class="py-5">
+        <div class="container">
+          <div class="text-center" data-aos="fade-up">
+            <h2 class="section-title">Unidad <span>1</span></h2>
+            <p class="section-text mx-auto">Organiza tus tareas, documentos y recursos en tarjetas modernas con navegación sencilla.</p>
+          </div>
+          <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-file-lines"></i></div>
+                <h4>Tareas</h4>
+                <p>Sube actividades, ejercicios y registros de aprendizaje.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-file-pdf"></i></div>
+                <h4>PDF</h4>
+                <p>Comparte apuntes, guías o documentos en formato PDF.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-image"></i></div>
+                <h4>Imágenes</h4>
+                <p>Visualiza capturas, esquemas o diseños de proyectos.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="unidad2" class="py-5">
+        <div class="container">
+          <div class="text-center" data-aos="fade-up">
+            <h2 class="section-title">Unidad <span>2</span></h2>
+            <p class="section-text mx-auto">Presenta tus recursos de manera ordenada y visual para una mejor experiencia.</p>
+          </div>
+          <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-folder-open"></i></div>
+                <h4>Documentos</h4>
+                <p>Almacena reportes, manuales y presentaciones de clase.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-video"></i></div>
+                <h4>Videos</h4>
+                <p>Agrega tutoriales, explicaciones o demostraciones en video.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+                <h4>Archivos</h4>
+                <p>Organiza toda tu carga académica en un único espacio.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="unidad3" class="py-5">
+        <div class="container">
+          <div class="text-center" data-aos="fade-up">
+            <h2 class="section-title">Unidad <span>3</span></h2>
+            <p class="section-text mx-auto">Diseño similar y elegante para mostrar cada contenido con un enfoque profesional.</p>
+          </div>
+          <div class="row g-4 mt-2">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-pen-ruler"></i></div>
+                <h4>Proyectos</h4>
+                <p>Muestra avances, mockups o ideas creativas de tus trabajos.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-code"></i></div>
+                <h4>Código</h4>
+                <p>Destaca ejercicios, aplicaciones o prototipos digitales.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="glass-card unit-card">
+                <div class="icon-wrap"><i class="fa-solid fa-rocket"></i></div>
+                <h4>Innovación</h4>
+                <p>Presenta tus ideas con un estilo futurista y llamativo.</p>
+                <a href="#" class="btn-link">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="glass-card contact-card">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-text">Puedes comunicarte conmigo por WhatsApp, correo o redes sociales.</p>
+                <div class="social-links mb-3">
+                  <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                  <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                  <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+                <p><i class="fa-solid fa-envelope me-2"></i> marcos.quezada6477@utc.edu.ec</p>
+                <p><i class="fa-solid fa-phone me-2"></i> 0998814317</p>
+              </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+              <div class="glass-card contact-card">
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Tu nombre" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Correo</label>
+                    <input type="email" class="form-control" placeholder="tu@email.com" />
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Asunto</label>
+                    <select class="form-select">
+                      <option>Consulta</option>
+                      <option>Colaboración</option>
+                      <option>Trabajo</option>
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-label">Mensaje</label>
+                    <textarea class="form-control" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+                  </div>
+                  <button type="submit" class="btn-neon"><i class="fa-solid fa-paper-plane"></i> Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <a class="whatsapp-float" href="https://wa.me/593998814317?text=Hola%20Marcos,%20vi%20tu%20p%C3%A1gina%20web%20y%20deseo%20comunicarme%20contigo." target="_blank" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Marcos Onais Quezada Sánchez</p>
+        <p>Proyecto Final</p>
+        <p>Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
