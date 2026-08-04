@@ -56,17 +56,54 @@ body::before {
   z-index: 1000;
 }
 
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .navbar.scrolled {
   background: rgba(4, 7, 15, 0.78);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   font-weight: 700;
   font-size: 1.05rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-main) !important;
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand-img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.navbar-brand span {
+  font-size: 0.95rem;
 }
 
 .navbar-nav .nav-link {
@@ -294,9 +331,37 @@ section {
   position: relative;
 }
 
+.map-box img {
+  position: absolute;
+  inset: 0;
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto;
+  padding: 0.7rem;
+  border-radius: 1.25rem;
+  z-index: 1;
+  display: block;
+}
+
 .map-box svg {
   width: 90%;
   height: 90%;
+  position: relative;
+  z-index: 0;
+}
+
+.city-info-list li {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-main);
+}
+
+.city-info-list li strong {
+  color: #ffffff;
+  font-size: 1.08rem;
 }
 
 .contact-card {
