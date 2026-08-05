@@ -1,6 +1,13 @@
+<img width="244" height="375" alt="6d57c32d0a5e60723618a7ef93b8ed0b" src="https://github.com/user-attachments/assets/2ef0c53f-dfdf-4ff6-9bbe-7ea24701b2ae" />
+<img width="218" height="187" alt="1354218389" src="https://github.com/user-attachments/assets/02f8f90d-aa23-4943-b672-0894d4ce570e" />
+<img width="330" height="292" alt="Arquitecturaneumann" src="https://github.com/user-attachments/assets/e8bfc963-d633-4696-a58e-d6c73076c7eb" />
+
+
+
+
+
+
 <img width="320" height="264" alt="sistemas" src="https://github.com/user-attachments/assets/54065c5d-fad8-4dcf-95e9-8e71267d6652" />
-
-
 <img width="947" height="500" alt="tipos-de-sistema-operativo" src="https://github.com/user-attachments/assets/7d211d6c-8cb7-4451-a60a-688553d4816c" />
 <img width="1536" height="1024" alt="Computadora-de-escritorio-Historia-y-evolucion" src="https://github.com/user-attachments/assets/07c2aa4d-1a41-41e6-a7a2-d1c2adc13469" />
 y tambien
