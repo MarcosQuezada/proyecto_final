@@ -408,8 +408,8 @@ section {
 
 .whatsapp-float {
   position: fixed;
-  right: 1.3rem;
-  bottom: 1.3rem;
+  left: 1.3rem;
+  bottom: 6.8rem;
   width: 58px;
   height: 58px;
   border-radius: 50%;
@@ -428,24 +428,7 @@ section {
   transform: scale(1.05);
 }
 
-.spotify-float {
-  position: fixed;
-  right: 1.3rem;
-  bottom: 5.1rem;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #1DB954, #1ed760);
-  color: white;
-  font-size: 1.25rem;
-  box-shadow: 0 12px 30px rgba(29,185,84,0.25);
-  z-index: 1002;
-  transition: transform 0.15s ease;
-}
-
-.spotify-float:hover { transform: scale(1.06); }
+/* Spotify flotante eliminado */
  
 
 footer {
@@ -490,27 +473,161 @@ footer {
   }
 }
 
-/* Estilos para el botón flotante de música local */
-.music-float {
+/* Botón de reproducción local eliminado */
+
+/* Estilos para el reproductor flotante de esquina */
+.corner-player {
   position: fixed;
-  right: 1.3rem;
-  bottom: 9rem;
-  width: 54px;
-  height: 54px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, #7af3ff, #00d4ff);
-  color: #04202a;
-  font-size: 1.15rem;
-  box-shadow: 0 12px 30px rgba(0,212,255,0.18);
-  z-index: 1003;
-  transition: transform 0.15s ease;
+  right: 1.2rem;
+  bottom: 1.6rem;
+  width: 260px;
+  background: rgba(4,32,42,0.55);
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  z-index: 1005;
+  backdrop-filter: blur(6px);
 }
 
-.music-float:hover { transform: scale(1.06); }
+.cp-progress {
+  height: 6px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
 
-.music-float i { pointer-events: none; }
+.cp-progress-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7af3ff, #00d4ff);
+  transition: width 0.15s linear;
+}
+
+.cp-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.cp-title {
+  color: #eaf7ff;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.cp-btn {
+  color: #dff8ff;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+.cp-play {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #ffffff, #e6faff);
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,212,255,0.12);
+}
+
+.cp-play i { color: #04202a; font-size: 1.25rem; pointer-events: none; }
+
+.tabs {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.tab-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.tab-button {
+  padding: 0.7rem 1rem;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.08);
+  color: #dff8ff;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tab-button.active,
+.tab-button:hover {
+  background: #7af3ff;
+  border-color: #7af3ff;
+  color: #04202a;
+}
+
+.tab-panels {
+  min-height: 100px;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.code-help p {
+  margin-bottom: 0.35rem;
+}
+
+.code-editor-section {
+  margin-top: 1rem;
+}
+
+.code-editor {
+  width: 100%;
+  min-height: 160px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #eaf7ff;
+  padding: 1rem;
+  border-radius: 0.85rem;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+.code-output {
+  min-height: 80px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 0.85rem;
+  padding: 1rem;
+  color: #dff8ff;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  white-space: pre-wrap;
+}
+
+
+.dfd-connection-line {
+  stroke: #7af3ff;
+  stroke-width: 2;
+  marker-end: url(#arrowhead);
+}
+
+@media (max-width: 480px) {
+  .corner-player { right: 0.6rem; left: 0.6rem; width: auto; }
+}
 
 /* Lightbox (ampliar imágenes) */
 .lightbox {
