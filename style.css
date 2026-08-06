@@ -287,12 +287,31 @@ section {
   min-height: 230px;
   position: relative;
   overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+}
+
+.unit-card:hover {
+  transform: translateY(-4px);
+}
+
+.unit-card.is-open {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 212, 255, 0.16);
+  border-color: rgba(0, 212, 255, 0.35);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(0, 212, 255, 0.08));
 }
 
 .unit-card .icon-wrap {
   font-size: 2rem;
   color: var(--accent);
   margin-bottom: 0.7rem;
+  transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.unit-card.is-open .icon-wrap {
+  color: #ffffff;
+  transform: scale(1.08);
+  text-shadow: 0 0 14px rgba(0, 212, 255, 0.6);
 }
 
 .unit-card .btn-link {
@@ -302,8 +321,63 @@ section {
   font-weight: 600;
 }
 
-.unit-card .btn-link:hover {
-  color: white;
+.unit-card summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: var(--accent) !important;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease, color 0.25s ease;
+}
+
+.unit-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.unit-card summary:hover {
+  transform: translateY(-2px);
+  background: rgba(0, 212, 255, 0.14);
+  color: white !important;
+}
+
+.unit-card summary:active {
+  transform: scale(0.97);
+}
+
+.unit-card details[open] summary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white !important;
+  box-shadow: 0 10px 24px rgba(0, 212, 255, 0.22);
+  transform: scale(1.03);
+}
+
+.unit-card details[open] summary i:last-child {
+  transform: rotate(180deg);
+}
+
+.unit-card details > div {
+  margin-top: 0.9rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  opacity: 0;
+  max-height: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.35s ease, max-height 0.45s ease, transform 0.35s ease, border-color 0.35s ease;
+}
+
+.unit-card details[open] > div {
+  opacity: 1;
+  max-height: 700px;
+  transform: translateY(0);
 }
 
 .unit-card::after {
@@ -314,6 +388,13 @@ section {
   height: 120px;
   background: radial-gradient(circle, rgba(0,212,255,0.22), transparent 70%);
   pointer-events: none;
+  opacity: 0.8;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.unit-card.is-open::after {
+  opacity: 1;
+  transform: scale(1.08);
 }
 
 .city-card {
@@ -544,11 +625,82 @@ footer {
 
 .cp-play i { color: #04202a; font-size: 1.25rem; pointer-events: none; }
 
+.interactive-toggle-row {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 0.9rem;
+}
+
+.expand-tabs-btn {
+  border: 1px solid rgba(122, 243, 255, 0.35);
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.18), rgba(91, 124, 255, 0.22));
+  color: #dff8ff;
+  padding: 0.8rem 1.15rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.03em;
+  box-shadow: 0 8px 22px rgba(0, 212, 255, 0.16);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.expand-tabs-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+  transform: translateX(-120%);
+  transition: transform 0.6s ease;
+}
+
+.expand-tabs-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 14px 28px rgba(0, 212, 255, 0.24);
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.28), rgba(91, 124, 255, 0.28));
+  border-color: rgba(122, 243, 255, 0.6);
+}
+
+.expand-tabs-btn:hover::before {
+  transform: translateX(120%);
+}
+
+.expand-tabs-btn:active {
+  transform: scale(0.97);
+}
+
 .tabs {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0, 212, 255, 0.06));
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
   padding: 1rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+  max-height: 92px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+}
+
+.tabs.is-expanded {
+  max-height: 1500px;
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px rgba(0, 212, 255, 0.12);
+}
+
+.tabs.is-collapsed .tab-buttons,
+.tabs.is-collapsed .tab-panels {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.tabs.is-expanded .tab-buttons,
+.tabs.is-expanded .tab-panels {
+  max-height: 1200px;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .tab-buttons {
@@ -559,20 +711,38 @@ footer {
 }
 
 .tab-button {
-  padding: 0.7rem 1rem;
+  padding: 0.72rem 1rem;
   border: 1px solid rgba(255,255,255,0.15);
   background: rgba(255,255,255,0.08);
   color: #dff8ff;
   border-radius: 999px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+  transform: translateX(-120%);
+  transition: transform 0.45s ease;
 }
 
 .tab-button.active,
 .tab-button:hover {
-  background: #7af3ff;
+  background: linear-gradient(90deg, #7af3ff, #5b7cff);
   border-color: #7af3ff;
   color: #04202a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(122, 243, 255, 0.2);
+}
+
+.tab-button:hover::before,
+.tab-button.active::before {
+  transform: translateX(120%);
 }
 
 .tab-panels {
@@ -605,6 +775,15 @@ footer {
   border-radius: 0.85rem;
   resize: vertical;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.code-editor:focus {
+  outline: none;
+  border-color: rgba(122, 243, 255, 0.7);
+  box-shadow: 0 0 0 3px rgba(122, 243, 255, 0.16);
+  transform: translateY(-1px);
 }
 
 .code-output {

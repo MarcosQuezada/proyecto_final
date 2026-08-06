@@ -68,6 +68,14 @@ document.addEventListener('DOMContentLoaded', () => {
   resizeCanvas();
   drawParticles();
 
+  document.querySelectorAll('.unit-card details').forEach((details) => {
+    details.addEventListener('toggle', () => {
+      const card = details.closest('.unit-card');
+      if (!card) return;
+      card.classList.toggle('is-open', details.open);
+    });
+  });
+
   const quizSelects = document.querySelectorAll('.unit-card select');
   quizSelects.forEach((select) => {
     select.addEventListener('change', () => {
@@ -99,6 +107,33 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById(target)?.classList.add('active');
     });
   });
+
+  const expandTabsBtn = document.getElementById('expand-tabs-btn');
+  const tabsContainer = document.querySelector('.tabs');
+
+  if (expandTabsBtn && tabsContainer) {
+    tabsContainer.classList.add('is-collapsed');
+
+    expandTabsBtn.addEventListener('click', () => {
+      const isExpanded = tabsContainer.classList.toggle('is-expanded');
+      tabsContainer.classList.toggle('is-collapsed', !isExpanded);
+
+      const label = expandTabsBtn.querySelector('span');
+      const icon = expandTabsBtn.querySelector('i');
+
+      if (label) {
+        label.textContent = isExpanded ? 'Cerrar Tocame' : 'Abrir Tocame';
+      }
+
+      if (icon) {
+        icon.className = isExpanded ? 'fa-solid fa-square-minus me-2' : 'fa-solid fa-square-plus me-2';
+      }
+
+      if (isExpanded) {
+        tabsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 
   const codeEditor = document.getElementById('code-editor');
   const codeRunBtn = document.getElementById('code-run-btn');
