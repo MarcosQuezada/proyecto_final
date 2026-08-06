@@ -1,10 +1,16 @@
+<img width="246" height="328" alt="foto1" src="https://github.com/user-attachments/assets/72757c7d-1812-45db-a4bf-6cd0959c187d" />
+<img width="720" height="1055" alt="goto1" src="https://github.com/user-attachments/assets/c7780939-0ee5-4ed8-993c-922d469583a5" />
+
+
+
+
+
+
+
+
 <img width="244" height="375" alt="6d57c32d0a5e60723618a7ef93b8ed0b" src="https://github.com/user-attachments/assets/2ef0c53f-dfdf-4ff6-9bbe-7ea24701b2ae" />
 <img width="218" height="187" alt="1354218389" src="https://github.com/user-attachments/assets/02f8f90d-aa23-4943-b672-0894d4ce570e" />
 <img width="330" height="292" alt="Arquitecturaneumann" src="https://github.com/user-attachments/assets/e8bfc963-d633-4696-a58e-d6c73076c7eb" />
-
-
-
-
 
 
 <img width="320" height="264" alt="sistemas" src="https://github.com/user-attachments/assets/54065c5d-fad8-4dcf-95e9-8e71267d6652" />
