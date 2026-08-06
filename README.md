@@ -11,7 +11,6 @@
 [Michael Jackson - Bad.mp3](https://github.com/user-attachments/files/30774295/Michael.Jackson.-.Bad.mp3)
 
 
-
 <img width="200" height="200" alt="foto4" src="https://github.com/user-attachments/assets/d2a63fdd-e475-4bcc-a00b-5c5a1a4d907e" />
 <img width="624" height="414" alt="foto3" src="https://github.com/user-attachments/assets/8c9ec18f-f04f-4f0f-8890-1faf39025fbd" />
 
